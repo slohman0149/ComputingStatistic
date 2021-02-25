@@ -6,15 +6,15 @@ public class LoanTester {
        System.out.println(testOne.getCountry() + " == Japan");
 //       System.out.println(testOne.getDaysToFund() + " == 5");
 //       System.out.println(testOne.getNumLenders() + " == 8");
-//       System.out.println(testOne);  //tests toString
-//       System.out.println("ID: 12345 loan amount: 280.0 country: Japan days to fund: 5 num lenders: 8");  //validates toString test
+       System.out.println(testOne);  //tests toString
+       System.out.println("ID: 12345 loan amount: 280.0 country: Japan days to fund: 5 num lenders: 8");  //validates toString test
       
-//       testOne.setID(54321);
-//       System.out.println(testOne.getID() + " == 54321");
-//       testOne.setLoanAmount(450.00);
-//       System.out.println(testOne.getLoanAmount() + " == 450.0");
-//       testOne.setCountry("USA");
-//       System.out.println(testOne.getCountry() + " == USA");
+       testOne.setID(54321);
+       System.out.println(testOne.getID() + " == 54321");
+       testOne.setLoanAmount(450.00);
+       System.out.println(testOne.getLoanAmount() + " == 450.0");
+       testOne.setCountry("USA");
+       System.out.println(testOne.getCountry() + " == USA");
 //       testOne.setDaysToFund(12);
 //       System.out.println(testOne.getDaysToFund() + " == 12");
 //       testOne.setNumLenders(4);
