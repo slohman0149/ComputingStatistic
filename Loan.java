@@ -3,7 +3,7 @@
  * Write a description of class Loan here.
  *
  * @SydneyL & SamK
- * @DATE GOES HERE
+ * @2/28/2021
  */
 public class Loan
 {
@@ -33,7 +33,14 @@ public class Loan
     public String getCountry() {
         return country;
     }
-    
+    //Gets the Days to Fund: syd
+    public int getDaysToFund() {
+        return daysToFund;
+    }
+    //Gets the Number of Lenders: syd
+    public int getNumLenders() {
+        return numLenders;
+    }
     
     //Sets the ID to a new int:syd
     public void setID(int ID) {
@@ -47,7 +54,14 @@ public class Loan
     public void setCountry(String country) {
         this.country = country;
     }
-    
+    //Sets the Days to Fund to a new int: syd
+    public void setDaysToFund(int daysToFund){
+        this.daysToFund = daysToFund;
+    }
+    //Sets the Number of Lenders to a new int: syd
+    public void setNumLenders(int numLenders) {
+        this.numLenders = numLenders;
+    }
     
     //Turns the entire Loan data into a printable string: syd
     public String toString() {
