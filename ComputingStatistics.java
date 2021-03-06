@@ -33,4 +33,78 @@ public class ComputingStatistics {
       }
       return amount;
    }
+   
+   /*
+    * Calculates the average of all the daysToFund in the data ArrayList
+    * @returns the average of daysToFund
+    */
+   public double avgDaysToFund(){
+       double average = 0.0;
+       int listSize = data.size();
+       for (Loan l:data) {
+           average += l.getDaysToFund();
+        }
+       average = average / listSize;
+       return average;
+    }
+   /*
+    * Finds the largest loan from a country
+    * @returns the largest loan
+    */
+   public double largestLoan(String countryName) {
+       double bigLoan = 0.0;
+       for (Loan l:data) {
+          String arrayCountry = l.getCountry(); 
+          if (arrayCountry.equals(countryName)) {
+              if (bigLoan < l.getLoanAmount()) {
+                  bigLoan = l.getLoanAmount();
+                }
+            }
+       }
+       return bigLoan;
+    }
+   /*
+    * Finds the average loan for a specific country
+    * @returns the average loan
+    */
+   public double avgLoan(String countryName) {
+       double averageLoan = 0.0;
+       for (Loan l:data) {
+           String arrayCountry = l.getCountry();
+           if (arrayCountry.equals(countryName)) {
+               averageLoan += l.getLoanAmount();
+            }
+        }
+       return averageLoan; 
+    }
+    /*
+     * Finds the country with the longest time to fund
+     * @returns the country with longest fund time
+     */
+   public String longestToFundCountry() {
+       String longestCountry = " ";
+       int fundTime = 0;
+       for (Loan l: data) {
+           if (fundTime < l.getDaysToFund()) {
+               longestCountry = l.getCountry();
+               fundTime = l.getDaysToFund();
+            }
+        }
+       return longestCountry;
+    }
+    /*
+     * Finds the total amount of loans funded from a specific 
+     * country
+     * @return total amount of loan
+     */
+   public int loansFunded(String countryName) {
+       int loanFund = 0;
+       for (Loan l:data) {
+           String arrayCountry = l.getCountry();
+           if (arrayCountry.equals(countryName)) {
+               loanFund += 1;
+            }
+        }
+       return loanFund;
+    }
 }
