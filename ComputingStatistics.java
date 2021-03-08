@@ -39,13 +39,16 @@ public class ComputingStatistics {
     * @returns the average of daysToFund
     */
    public double avgDaysToFund(){
-       double average = 0.0;
+       double averageSec = 0.0;
        int listSize = data.size();
        for (Loan l:data) {
-           average += l.getDaysToFund();
+           averageSec += l.getDaysToFund();
         }
-       average = average / listSize;
-       return average;
+       double averageMin = averageSec / 60;
+       double avergeHour = averageMin / 60;
+       double averageDay = avergeHour / 24;
+       averageDay = averageDay / listSize;
+       return averageDay;
     }
    /*
     * Finds the largest loan from a country
